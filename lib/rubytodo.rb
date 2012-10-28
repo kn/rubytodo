@@ -21,9 +21,9 @@ class RubyTodo
   protected
 
   def self.extract_todos node
-    return nil unless node.is_a? Sexp
+    return [] unless node.is_a? Sexp
     todos = node.find_nodes(:call).map { |n| extract_todo_msg_from_args(n[3]) if n[2] == :todo }
-    (todos | node.collect { |n| extract_todos n }).flatten.compact
+    (todos | node.collect { |n| extract_todos n }).flatten.compact 
   end
 
   def self.extract_todo_msg_from_args node
