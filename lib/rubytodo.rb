@@ -2,10 +2,15 @@ require 'object'
 require 'ruby_parser'
 
 class RubyTodo
-  def self.list options
-    root = options[:root]
-    puts "Scanning todos in #{root} ..."
-    files = Dir.glob File.join(root, "**", "*")
+  def self.list target
+    files = if File.file? target
+      [target]
+    elsif File.directory? target
+      puts "Scanning todos in #{target} ..."
+      files = Dir.glob File.join(target, "**", "*")
+    else
+      abort "#{target} does not exist."
+    end
     files.reject { |f| f !~ /\.rb\Z/ }.each do |f|
       todos = scan_todos f
       puts f unless todos.nil? || todos.empty?
@@ -14,7 +19,8 @@ class RubyTodo
   end
 
   def self.scan_todos file_path
-    ptree = RubyParser.new.parse File.open(file_path, 'r').read
+    parser = RubyParser.new
+    ptree = parser.parse File.open(file_path, 'r').read
     extract_todos ptree
   end
 

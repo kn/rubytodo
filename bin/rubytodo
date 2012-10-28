@@ -3,6 +3,4 @@
 require 'rubygems'
 require 'rubytodo'
 
-root = ARGV[0] || "."
-
-RubyTodo.list :root => root
+RubyTodo.list ARGV[0] || "."
