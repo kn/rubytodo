@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rdoc'
 
-  s.executables = %w(todo)
+  s.executables = %w(rubytodo)
   s.require_path = 'lib'
-  s.files = %w(LICENSE README.md Rakefile bin/todo) + Dir.glob("{lib}/**/*")
+  s.files = %w(LICENSE README.md Rakefile bin/rubytodo) + Dir.glob("{lib}/**/*")
 end
