@@ -22,7 +22,7 @@ end
 ```
 
 Then list todos in all ruby files under a given root folder:
-```ruby
+```
 $ todo lib
 Scanning todos in lib ...
 lib/my_class.rb
