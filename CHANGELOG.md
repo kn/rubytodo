@@ -1,3 +1,3 @@
-## TODO 0.0.1 ##
+## RubyTodo 0.0.1 ##
 
 * prototype

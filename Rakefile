@@ -12,7 +12,7 @@ RSpec::Core::RakeTask.new(:rspec) do |t|
   t.pattern = './spec/**/*_spec.rb'
 end
 
-spec = Gem::Specification.load(File.join(File.dirname(__FILE__), "/todo.gemspec"))
+spec = Gem::Specification.load(File.join(File.dirname(__FILE__), "/rubytodo.gemspec"))
 
 desc "Package gem."
 Gem::PackageTask.new(spec) do |pkg|

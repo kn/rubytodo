@@ -1,4 +1,4 @@
-require 'todo'
+require 'rubytodo'
 
 describe Object do
   describe "#todo" do

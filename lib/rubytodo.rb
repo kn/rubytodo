@@ -1,7 +1,7 @@
 require 'object'
 require 'ruby_parser'
 
-class Todo
+class RubyTodo
   def self.list options
     root = options[:root]
     puts "Scanning todos in #{root} ..."

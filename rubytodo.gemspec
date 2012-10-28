@@ -1,16 +1,16 @@
-require File.join(File.dirname(__FILE__), 'lib', 'todo', 'version')
+require File.join(File.dirname(__FILE__), 'lib', 'rubytodo', 'version')
 
 Gem::Specification.new do |s|
-  s.name = "todo"
-  s.version = ::Todo::VERSION
+  s.name = "rubytodo"
+  s.version = ::RubyTodo::VERSION
   s.authors = ["Katsuya Noguchi"]
   s.email = ["katsuya.noguchi@gmail.com"]
-  s.homepage = "https://github.com/kn/todo"
-  s.description = "Todo allows you to have in-code todos and scan them to view the todos as a list"
+  s.homepage = "https://github.com/kn/rubytodo"
+  s.description = "RubyTodo allows you to have in-code todos and scan them to view the todos as a list"
 
   s.platform = Gem::Platform::RUBY
   s.has_rdoc = true
-  s.summary = "Todo allows you to have in-code todos and scan them to view the todos as a list"
+  s.summary = "RubyTodo allows you to have in-code todos and scan them to view the todos as a list"
 
   s.add_dependency 'ruby_parser', '~> 2.3.0'
 

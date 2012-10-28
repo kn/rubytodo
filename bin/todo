@@ -1,8 +1,8 @@
 #!/usr/bin/ruby
 
 require 'rubygems'
-require 'todo'
+require 'rubytodo'
 
 root = ARGV[0] || "."
 
-Todo.list :root => root
+RubyTodo.list :root => root
