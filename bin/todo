@@ -1,0 +1,8 @@
+#!/usr/bin/ruby
+
+require 'rubygems'
+require 'todo'
+
+root = ARGV[0] || "."
+
+Todo.list :root => root
