@@ -26,5 +26,5 @@ Then list todos in all ruby files under a given root folder:
 $ todo lib
 Scanning todos in lib ...
 lib/my_class.rb
-implement my_method
+* implement my_method
 ```

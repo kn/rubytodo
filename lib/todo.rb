@@ -9,7 +9,7 @@ class Todo
     files.reject { |f| f !~ /\.rb\Z/ }.each do |f|
       todos = scan_todos f
       puts f unless todos.nil? || todos.empty?
-      todos.each { |todo| puts todo }
+      todos.each { |todo| puts "* #{todo}" }
     end
   end
 
